@@ -1,0 +1,69 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    maven {
+      url 'https://plugins.gradle.org/m2/'
+    }
+  }
+}
+
+apply plugin: 'eclipse'
+
+allprojects {
+  repositories {
+    mavenCentral()
+    mavenLocal()
+  }
+}
+
+subprojects {
+  apply plugin: 'java'
+  apply plugin: 'eclipse'
+
+  // Set the same version for all sub-projects to root project version
+  version = rootProject.version
+
+
+  plugins.withType(JavaPlugin) {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+
+    dependencies {
+      testCompile('junit:junit:4.12')
+    }
+  }
+
+  // Common distribution plugin settings for sub-modules
+  plugins.withType(DistributionPlugin) {
+    distTar {
+      compression = Compression.GZIP
+      extension = 'tar.gz'
+    }
+  }
+
+  /**
+   * Print test execution summary when informational logging is enabled.
+   */
+  test {
+    testLogging {
+      afterSuite { desc, result ->
+        if (desc.getParent()) {
+          logger.info desc.getName()
+        } else {
+          logger.info "Overall"
+        }
+        logger.info "  ${result.resultType} (" +
+              "${result.testCount} tests, " +
+              "${result.successfulTestCount} passed, " +
+              "${result.failedTestCount} failed, " +
+              "${result.skippedTestCount} skipped)"
+      }
+    }
+  }
+}
+
+/**
+ * Gradle wrapper task.
+ */
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.7'
+}

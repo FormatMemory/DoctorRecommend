@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DoctorRecommendation.DoctorTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-12T19:33:27" hostname="DingYushengs-MacBook-Pro.local" time="0.006">
+  <properties/>
+  <testcase name="DoctorAllTest" classname="DoctorRecommendation.DoctorTest2" time="0.006"/>
+  <system-out><![CDATA[           Find Similar Doctors 
+Target Doctor: 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ID: Dc110, Name: David0, ReviewScore: 3.3
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Add Doctors: 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ID: Dc110, Name: David0, ReviewScore: 3.3
+ID: Dc111, Name: David1, ReviewScore: 3.5
+ID: Dc112, Name: David2, ReviewScore: 3.0
+ID: Dc113, Name: David3, ReviewScore: 4.1
+ID: Dc114, Name: Davie4, ReviewScore: 5.0
+ID: Dc115, Name: Davie5, ReviewScore: 0.0
+ID: Dc116, Name: Davie6, ReviewScore: 1.4
+ID: Dc117, Name: Davie7, ReviewScore: 3.77
+ID: Dc118, Name: Davie8, ReviewScore: 2.4
+ID: Dc119, Name: Davie9, ReviewScore: 3.2
+ID: Dc120, Name: Davie10, ReviewScore: 3.5
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Similar Doctors: 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ID: Dc119, Name: Davie9, ReviewScore: 3.2
+ID: Dc120, Name: Davie10, ReviewScore: 3.5
+ID: Dc111, Name: David1, ReviewScore: 3.5
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
