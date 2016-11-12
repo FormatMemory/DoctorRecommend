@@ -18,9 +18,9 @@ Save all doctors objects into a TreeSet and define the comparator for this TreeS
 
 How to define the comparator will influence the accuracy of doctor recommendation.
 
-The reason I use TreeSet to save doctors information is because I assume we will do find K Similar Doctors action very frequently. And TreeSet is red-black tree's java implementation, we can easily find a doctor in log(n) time and then access it's neighbors(similar doctors) in constant time (after finding that doctor). And every time we want to update this TreeSet, the time cost would be log(n). Totally space cost for TreeMap is O(n), which is also very good. 
+The reason I use *TreeSet* to save doctors information is because I assume we will do *`find K Similar Doctors`* action very frequently. And TreeSet is `red-black tree`'s java implementation, we can easily find a doctor in *log(n)* time and then access it's neighbors(similar doctors) in constant time (after finding that doctor). And every time we want to update this TreeSet, the time cost would be *log(n)*. Totally space cost for TreeMap is *O(n)*, which is also very good. 
 
-The comparator here takes location, reviewScore, location(now is zip code), category, language into consideration. I self-defined some weights for these factors, which might be not very precisely.
+The comparator here takes `location`, `reviewScore`, `location`(now is zip code), `category`, `language` into consideration. I self-defined some weights for these factors, which might be not very precisely.
 
 I also implemented two other comparators (Review Score, location), however, I found the performance (recommendation accuracy) for these single factor comparators are not very good. I think it is because, for single factor comparator, weight adjustment/normalization is also needed. 
 
