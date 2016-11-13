@@ -41,21 +41,6 @@ public class main {
 		System.out.println();
 		printDoctorList(" Add Doctors ", doctorList);
 		System.out.println();
-		
-		System.out.println(("setsize:"+rd.doctorSet.size()+", docList size"+doctorList.size()));
-		
-		Doctor temp = new Doctor("Dc121", "Davie11", 29, l3, 3.0, 1);
-		//add a doctor
-		rd.setDoctor(temp);
-		System.out.println(("setsize:"+rd.doctorSet.size()+", docList size"+doctorList.size()));
-		//delete a doctor not exist in our set
-		rd.delDoctor("Dc999");
-		System.out.println(("setsize:"+rd.doctorSet.size()+", docList size"+doctorList.size()));
-		//delete a doctor in our set
-		rd.delDoctor("Dc121");
-		rd.doctorSet.remove(temp);
-		System.out.println(("setsize:"+rd.doctorSet.size()+", docList size"+doctorList.size()));
-
 		printDoctorList(" Similar Doctors ",  rd.get_K_SimilarDoctor(doc, 3, rd.doctorSet));
 	}
 	

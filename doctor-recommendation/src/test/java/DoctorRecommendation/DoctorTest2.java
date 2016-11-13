@@ -52,6 +52,8 @@ public class DoctorTest2 {
 		//add a doctor
 		rd.setDoctor(temp);
 		assertTrue(rd.doctorSet.size() == doctorList.size()+1);
+		rd.setDoctor(temp);
+		assertTrue(rd.doctorSet.size() == doctorList.size()+1);//add the same doctor twice
 		//delete a doctor not exist in our set
 		rd.delDoctor("Dc999");
 		assertTrue(rd.doctorSet.size() == doctorList.size()+1);

@@ -16,7 +16,7 @@ public class DoctorComparatorLocation implements Comparator{
 		Doctor d1 = (Doctor)o1;
 		Doctor d2 = (Doctor)o2;
 		int locationDiff = Math.abs(d1.getLocation().getZipcode() - d2.getLocation().getZipcode()); 
-		if(locationDiff <= 200) return -1;//in the same area
+		if(locationDiff <= 200) return 0;//in the same area
 		else return locationDiff;
 	}
 }

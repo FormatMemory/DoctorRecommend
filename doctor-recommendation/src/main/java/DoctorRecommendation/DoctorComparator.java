@@ -15,6 +15,7 @@ public class DoctorComparator implements Comparator{
 		// TODO Auto-generated method stub
 		Doctor d1 = (Doctor)o1;
 		Doctor d2 = (Doctor)o2;
+		if(d1.equals(d2)) return 0;
 		double ageDiff = d1.getAge() - d2.getAge();
 		double scoreDiff = (d1.getReviewScore() - d2.getReviewScore()) > 1 ? 1 : 0; //review score 
 		double locationDiff = d1.getLocation().getZipcode() - d2.getLocation().getZipcode() > 500 ? -1 : 0; //in the same area

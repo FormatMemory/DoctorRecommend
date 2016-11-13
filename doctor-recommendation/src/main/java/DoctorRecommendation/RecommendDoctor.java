@@ -18,7 +18,6 @@ public class RecommendDoctor {
 		//doctorSet = new TreeSet<Doctor>(new DoctorComparatorLocation());
 		//doctorSet = new TreeSet<Doctor>(new DoctorComparatorScore());
 		doctorSet = new TreeSet<Doctor>(new DoctorComparator());
-		
 	}
 	
 	/**
