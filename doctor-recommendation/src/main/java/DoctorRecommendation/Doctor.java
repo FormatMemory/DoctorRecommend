@@ -23,6 +23,15 @@ public class Doctor{
 		this.reviewScore = score;
 		this.category = cate;
 	}
+	
+	public Doctor(String id){
+		this.ID_Number = id;
+		this.name = "None";
+		this.age = -1;
+		this.location = new Location();
+		this.reviewScore = -1;
+		this.category = -1;
+	}
 	/**
 	 * If ID_Number is the same then it's the same doctor
 	 * @param Doctor doc

@@ -45,8 +45,11 @@ public class RecommendDoctor {
 	public void delDoctor(String ID){
 		//hash function and equal function in TreeSet has been rewrote,
 		//the same id indicates one doctor
-		Doctor doc = new Doctor(ID, null, 0, null, 0, 0);
-		doctorSet.remove(doc);
+		Doctor doc = new Doctor(ID);
+		if(doctorSet.contains(doc)){
+			System.out.println("in contain");
+			doctorSet.remove(doc);
+		}
 	}
 	
 	/**
