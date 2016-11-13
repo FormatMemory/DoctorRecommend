@@ -47,7 +47,6 @@ public class RecommendDoctor {
 		//the same id indicates one doctor
 		Doctor doc = new Doctor(ID);
 		if(doctorSet.contains(doc)){
-			System.out.println("in contain");
 			doctorSet.remove(doc);
 		}
 	}

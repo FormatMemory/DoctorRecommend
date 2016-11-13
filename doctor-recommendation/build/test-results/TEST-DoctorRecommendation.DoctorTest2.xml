@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DoctorRecommendation.DoctorTest2" tests="1" skipped="0" failures="1" errors="0" timestamp="2016-11-13T04:42:56" hostname="DingYushengs-MacBook-Pro.local" time="0.007">
+<testsuite name="DoctorRecommendation.DoctorTest2" tests="1" skipped="0" failures="1" errors="0" timestamp="2016-11-13T05:14:33" hostname="DingYushengs-MacBook-Pro.local" time="0.011">
   <properties/>
-  <testcase name="DoctorAllTest" classname="DoctorRecommendation.DoctorTest2" time="0.007">
+  <testcase name="DoctorAllTest" classname="DoctorRecommendation.DoctorTest2" time="0.011">
     <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)

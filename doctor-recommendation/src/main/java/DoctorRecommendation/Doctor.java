@@ -41,7 +41,7 @@ public class Doctor{
 		    boolean result = false;
 		    if (other instanceof Doctor) {
 		    	Doctor that = (Doctor) other;
-		        result = this.ID_Number == that.ID_Number;
+		        result = this.ID_Number.equals(that.ID_Number);
 		    }
 		    return result;
 	}
@@ -50,7 +50,12 @@ public class Doctor{
 	 * Need the same hashcode when using eg. treemap.contains(doc) 
 	 */
     @Override public int hashCode() {
-        return this.ID_Number.hashCode();
+        //return this.ID_Number.hashCode();
+    	int hash = 7;
+    	for(int i = 0; i < this.ID_Number.length(); i++){
+    		hash = hash*31 + this.ID_Number.charAt(i);
+    	}
+		return hash;
     }
 	 
     public String getID_Number(){
@@ -72,7 +77,7 @@ public class Doctor{
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
-		name = name;
+		this.name = name;
 	}
 
 	/**
