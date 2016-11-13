@@ -42,6 +42,7 @@ public class RecommendDoctor {
 	 * @param doc
 	 */
 	public void delDoctor(String ID){
+		if(ID == null) return;
 		//hash function and equal function in TreeSet has been rewrote,
 		//the same id indicates one doctor
 		Doctor doc = new Doctor(ID);
@@ -55,6 +56,7 @@ public class RecommendDoctor {
 	 * @param doctorList
 	 */
 	public void addAll(ArrayList<Doctor> doctorList){
+		if(doctorList == null) return;
 		for(Doctor doc:doctorList){
 			this.setDoctor(doc);
 		}
